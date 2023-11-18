@@ -13,21 +13,27 @@ Pre requisitos
 •	Postman
 
 
-Clonar repositorio <REPOSITORIO>
+Clonar repositorio
+
+https://github.com/renefuenteskeim/symfony-test-2023.git
+
 Ejecutar el siguiente comando: 
 
+```bash
 $ composer install
 $ composer update
+```
 
 Modificar archivo .env y archivo compose.yaml con las credenciales de la base de datos
-DATABASE_URL=postgresql://<usuario>:<password>@127.0.0.1:<puerto>/products
+DATABASE_URL=postgresql://"usuario":"password"@127.0.0.1:"puerto"/products
 
 Ejecutar el siguiente comando:
 
+```bash
 $ php bin/console doctrine:database:create
 $ php bin/console doctrine:migrations:migrate
 $ symfony server:start
-
+```
 
 Rutas de la aplicación en Postman:
 
