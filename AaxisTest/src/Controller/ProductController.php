@@ -73,7 +73,7 @@ class ProductController extends AbstractController
                 $product->setSku($sku);
                 $product->setProductName($name);
                 $product->setDescription($description);
-                $currentDateTime = new \DateTime();
+                $currentDateTime = new \DateTime('now', new \DateTimeZone('America/Santiago'));
                 $product->setCreatedAt($currentDateTime);
                 $product->setUpdateAt($currentDateTime);
 
