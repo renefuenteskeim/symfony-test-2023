@@ -3,27 +3,33 @@
 Pre requisitos
 
 •	Symfony CLI: https://symfony.com/download
+
 •	PHP 8.2 (cli).
+
 •	Composer: https://getcomposer.org/download/
+
 •	Postgres
+
 •	Postman
 
 
 Clonar repositorio <REPOSITORIO>
 Ejecutar el siguiente comando: 
 
-• composer update
+$ composer install
+$ composer update
 
-Modificar archivo .env con las credenciales de la base de datos
--
+Modificar archivo .env y archivo compose.yaml con las credenciales de la base de datos
+DATABASE_URL=postgresql://<usuario>:<password>@127.0.0.1:<puerto>/products
 
 Ejecutar el siguiente comando:
 
-• <Crear tablas>
-• symfony server:start
+$ php bin/console doctrine:database:create
+$ php bin/console doctrine:migrations:migrate
+$ symfony server:start
 
 
-Rutas de la aplicación:
+Rutas de la aplicación en Postman:
 
 | Ruta | Descripcion |
 | --- | --- |
